@@ -6,9 +6,46 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- tags for bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <p>Logo</p>
+          </div>
+          <div class="col-lg-7">
+            <nav class="main_menu">
+              <ul>
+                <li><%= link_to('Услуги', services_path) %></li>
+                <li><%= link_to('Контакты', contacts_path) %></li>
+                <li><%= link_to('Наши работы', our_works_path) %></a></li>
+                <li><a href="#">О нас</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-3">
+            <p>Tel and form</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- before yield -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <!-- after yield -->
+
   </body>
 </html>
