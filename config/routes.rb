@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'forms/index'
+
+  get 'forms/form_send'
+
   root 'homes#index'
 
   resources :services, :contacts, :our_works, :about_us
