@@ -16,20 +16,25 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2">
-            <p>Logo</p>
+            <%= link_to(image_tag("logo.png", class: "logo_img", alt: "Олимп сервис"), root_path) %>
           </div>
           <div class="col-lg-7">
             <nav class="main_menu">
-              <ul>
+              <ul class="ul_main_menu">
                 <li><%= link_to('Услуги', services_path) %></li>
                 <li><%= link_to('Контакты', contacts_path) %></li>
                 <li><%= link_to('Наши работы', our_works_path) %></a></li>
-                <li><a href="#">О нас</a></li>
+                <li><%= link_to('О нас', about_us_path) %></li>
               </ul>
             </nav>
           </div>
           <div class="col-lg-3">
-            <p>Tel and form</p>
+            <div class="telephone">
+              <p><span class="glyphicon glyphicon-earphone"></span><%= link_to('8 (812) 220-32-96', 'tel:88122203296') %></p>
+            </div>
+            <div class="form_button" >
+              <span class="glyphicon glyphicon-bullhorn"></span><%= link_to('Оставить заявку', '#', { 'data-toggle' => 'modal', 'data-target' => '#modal_window'}) %>
+            </div>
           </div>
         </div>
       </div>
@@ -46,6 +51,33 @@
     </div>
 
     <!-- after yield -->
+
+    <div class="modal fade" id="modal_window" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Новая заявка</h4>
+          </div>
+          <div class="modal-body">
+            <form id="order_form" data-toggle="validator" role="form" accept-charset="UTF-8" action="/homes" method="get">
+              <div class="form-group">
+                <label for="user_phone" class="control-label">Телефон:</label>
+                <input type="tel" class="form-control" id="user_phone">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Имя:</label>
+                <input class="form-control" maxlength="25" id="message-text" placeholder="Введите свое имя" ></input>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button  form="order_form" type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </div>
+      </div>
+      </div>
 
   </body>
 </html>

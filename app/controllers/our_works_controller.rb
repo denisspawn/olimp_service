@@ -1,4 +1,4 @@
-class OurWorkController < ApplicationController
+class OurWorksController < ApplicationController
 
   def index
     @page_title = "Наши работы"
