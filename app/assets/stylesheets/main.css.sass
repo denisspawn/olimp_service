@@ -1,7 +1,8 @@
 $primary-color: #00ffff
+$dark-broun: #262626
 
 header
-  background-color: #262626
+  background-color: $dark-broun
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
 
 nav
@@ -64,6 +65,16 @@ nav
     &:focus
       color: #ffffff
       text-decoration: none
+
+.modal-footer
+  button
+    border-radius: 10px
+    border: 2px solid $primary-color
+  .submit_button
+    background-color: $dark-broun
+    &:focus, &:active, &:hover
+      background-color: $dark-broun !important
+      border: 2px solid $primary-color
 
 div
   .tooltip-inner

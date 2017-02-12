@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'forms/index'
-
-  get 'forms/form_send'
-
   root 'homes#index'
+
+  get 'form' => 'forms#index', :as => :form
+  post 'form' => 'forms#form_send', :as => :form_send
 
   resources :services, :contacts, :our_works, :about_us
 

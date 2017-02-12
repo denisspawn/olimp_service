@@ -1,0 +1,28 @@
+<div class="modal fade" id="modal_window" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Заявка</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= form_tag("/form", method: "post", id: "order_form", "data-toggle" => "validator", role: "form") do %>
+          <div class="form-group">
+            <label for="user_phone" class="control-label">Телефон:</label>
+            <input type="tel" class="form-control bfh-phone" id="user_phone" name="user_phone" data-format="+7 (ddd) ddd-dd-dd" />
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Имя:</label>
+            <input class="form-control" maxlength="25" id="message-text" name="user_name" placeholder="Введите свое имя" />
+          </div>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button  form="order_form" type="submit" class="btn btn-primary submit_button">Отправить заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
