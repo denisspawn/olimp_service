@@ -1,1 +1,39 @@
-<%= render(:partial => 'partials/carousel') %>
+<div class="container">
+  <div class="row">
+    <div class="slider col-lg-12">
+      <%= render(:partial => 'partials/carousel') %>
+    </div>
+  </div>
+  <main>
+    <section>
+      <div class="row">
+        <div class="triggers col-lg-12">
+          <div class="why_we">
+            <h2>Почему выберают нас?</h2>
+          </div>
+        </div>
+        <div class="triggers">
+          <div class=" col-lg-4">
+            <div class="triger">
+              <%= image_tag("triggers/clock.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
+            </div>
+            <p>Выезд на адрес в день заказа</p>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="triger">
+              <%= image_tag("triggers/cup.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
+            </div>
+            <p>Гарантия на работы 2 года</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="triger">
+              <%= image_tag("triggers/hat.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
+            </div>
+            <p>Мы профессионалы</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
