@@ -1,6 +1,27 @@
 $primary-color: #00ffff
 $dark-broun: #262626
 
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+
+=box-shadow($top, $left, $blur, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow:inset $top $left $blur $color
+    -moz-box-shadow:inset $top $left $blur $color
+    box-shadow:inset $top $left $blur $color
+  @else
+    -webkit-box-shadow: $top $left $blur $color
+    -moz-box-shadow: $top $left $blur $color
+    box-shadow: $top $left $blur $color
+
+body
+  background-color: #F5F5DC!important
+  //background: linear-gradient(to top, #F5F5DC, #ffffff)
+  //height: 1200px
 header
   background-color: $dark-broun
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -85,6 +106,7 @@ div
 
 
 .carousel
+  +box-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.5))
   height: 400
 
 
@@ -105,8 +127,8 @@ div
   padding: 20px 0
 
 .triger
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
-  border-radius: 50%
+  +border-radius(50%)
+  +box-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.5))
   margin: 0 auto
   background-color: $dark-broun
   width: 140px
