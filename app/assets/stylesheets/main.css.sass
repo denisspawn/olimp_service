@@ -18,10 +18,26 @@ $dark-broun: #262626
     -moz-box-shadow: $top $left $blur $color
     box-shadow: $top $left $blur $color
 
+div
+  text-align: center
+  .header_h2
+    display: inline-block
+    border-bottom: 2px solid $primary-color
+    padding-bottom: 5px
+    margin: 40px 0 70px 0
+hr
+  margin-top: 60px!important
+  border: none!important
+  background-color: $dark-broun!important
+  color: $dark-broun!important
+  height: 1px!important
+
 body
   background-color: #F5F5DC!important
   //background: linear-gradient(to top, #F5F5DC, #ffffff)
   //height: 1200px
+
+
 header
   background-color: $dark-broun
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -111,27 +127,40 @@ div
 
 
   /* section 1*/
-.triggers
-  text-align: center
+.wrap_trigger
   p
     padding-top: 20px
     font-size: 22px
     display: inline-block
     width: 200px
-  h2
-    display: inline-block
-    border-bottom: 2px solid $primary-color
-    padding-bottom: 5px
 
-.why_we
-  padding: 20px 0
-
-.triger
+.trigger
   +border-radius(50%)
   +box-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.5))
   margin: 0 auto
   background-color: $dark-broun
+  text-align: center
   width: 140px
   height: 140px
   p
     padding-top: 20px
+
+.why_we
+  padding: 20px 0
+
+  /* section 2*/
+.element_menu
+  +border-radius(10%)
+  +box-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.5))
+  margin: 20px auto
+  background-color: $dark-broun
+  padding: 10px 10px
+  width: 200px
+  height: 200px
+  p
+    padding-top: 10px
+    vertical-align: middle
+    a
+      color: $primary-color
+      font-size: 16px
+      text-decoration: none

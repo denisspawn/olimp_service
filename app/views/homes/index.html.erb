@@ -7,40 +7,97 @@
   <main>
     <section>
       <div class="row">
-        <div class="triggers col-lg-12">
-          <div class="">
-            <h2>Почему выберают нас?</h2>
+        <div class="col-lg-12">
+          <div>
+            <h2 class="header_h2">Почему выберают нас?</h2>
           </div>
         </div>
-        <div class="triggers">
-          <div class=" col-lg-4">
-            <div class="triger">
-              <%= image_tag("triggers/clock.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
-            </div>
-            <p>Выезд на адрес в день заказа</p>
+        <div class="wrap_trigger col-lg-4">
+          <div class="trigger">
+            <%= image_tag("triggers/clock.png", height: '140', width: '140', class: "triggers_img", alt: "Скорость работы") %>
           </div>
-
-          <div class="col-lg-4">
-            <div class="triger">
-              <%= image_tag("triggers/cup.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
-            </div>
-            <p>Гарантия на работы 2 года</p>
+          <p>Выезд на адрес в день заказа</p>
+        </div>
+        <div class="wrap_trigger col-lg-4">
+          <div class="trigger">
+            <%= image_tag("triggers/cup.png", height: '140', width: '140', class: "triggers_img", alt: "Гарантия") %>
           </div>
-          <div class="col-lg-4">
-            <div class="triger">
-              <%= image_tag("triggers/hat.png", height: '140', width: '140', class: "triggers_img", alt: "") %>
-            </div>
-            <p>Мы профессионалы</p>
+          <p>Гарантия на работы 2 года</p>
+        </div>
+        <div class="wrap_trigger col-lg-4">
+          <div class="trigger">
+            <%= image_tag("triggers/hat.png", height: '140', width: '140', class: "triggers_img", alt: "Профессионализм") %>
           </div>
+          <p>Мы профессионалы</p>
         </div>
       </div>
     </section>
-
+    <hr>
     <section>
       <div class="row">
         <div class="col-lg-12">
-          <div class="">
-            <h2>Наши работы</h2>
+          <div>
+            <h2 class="header_h2">Мы выполняем:</h2>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/key.png", class: "element_menu_img", alt: "Ключ"), root_path) %>
+              <p><%= link_to("Ремонт сантехнического оборудования", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/sink.png", class: "element_menu_img", alt: "Раковина"), root_path) %>
+              <p><%= link_to("Монтаж раковины и мойки", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/mixer.png", class: "element_menu_img", alt: "Смеситель"), root_path) %>
+              <p><%= link_to("Монтаж и ремонт смесителей", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/pipe.png", class: "element_menu_img", alt: "Трубы"), root_path) %>
+              <p><%= link_to("Монтаж и замена труб и стояков", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/radiator.png", class: "element_menu_img", alt: "Радиатор"), root_path) %>
+              <p><%= link_to("Монтаж и замена радиаторов отопления", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/coil.png", class: "element_menu_img", alt: "Полотенцесушитель"), root_path) %>
+              <p><%= link_to("Монтаж полотенцесуши-телей", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/shower.png", class: "element_menu_img", alt: "Душевая кабина"), root_path) %>
+              <p><%= link_to("Сборка и монтаж душевой кабины", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/toilet.png", class: "element_menu_img", alt: "Унитаз"), root_path) %>
+              <p><%= link_to("Монтаж и замена ванны и унитаза", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/installation.png", class: "element_menu_img", alt: "Монтаж"), root_path) %>
+              <p><%= link_to("Профессиональный монтаж сантехники", root_path) =%></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="element_menu">
+              <%= link_to(image_tag("elements_menu/service.png", class: "element_menu_img", alt: "Обслуживание сантехники"), root_path) %>
+              <p><%= link_to("Техническое обслуживание сантехники", root_path) =%></p>
+            </div>
           </div>
         </div>
       </div>
