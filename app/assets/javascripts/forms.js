@@ -20,8 +20,7 @@ $(document).ready(function() {
 
       var form = $(this);
 
-      var div_submit_button = $('.modal-footer'),
-          submitBtn = div_submit_button.find('button[type="submit"]');
+      var submitBtn = $('.submit_button');
 
 
       if( app.validateForm(form) === false ) return false;
@@ -51,40 +50,41 @@ $(document).ready(function() {
     },
 
     validateForm: function (form){
-      var inputs = $('.form-group').find('input'),
+      var inputs = form.find('input[class*=form-control]'),
           valid = true;
 
+      $.each(inputs, function(index, val) {
+        var input = $(val),
+            val = input.val(),
+            formGroup = input.parents('.form-group'),
+            label = formGroup.find('label').text().toLowerCase(),
+            textError = "Введите " + label;
 
-        $.each(inputs, function(index, val) {
-            var input = $(val),
-                val = input.val(),
-                formGroup = input.parents('.form-group'),
-                label = formGroup.find('label').text().toLowerCase(),
-                textError = 'Введите ' + label;
-
-            // Если в поле имя ну будет значения - вызовится ошибка
-            if(val.length == 0){
-                $('input[name=user_name]').parents('.form-group').addClass('has-error').removeClass('has-success');
-                $('input[name=user_name]').tooltip({
-                    trigger: 'manual',
-                    placement: 'right',
-                    title: textError
-                }).tooltip('show');
-                valid = false;
-            // Если в поле тел значение будет < 18 - вызовится ошибка (маска тел. подгружается с файла bootstrap-mask-phone.js)
-            }else if($('input[name=user_phone]').val().length < 18){
-                $('input[name=user_phone]').parents('.form-group').addClass('has-error').removeClass('has-success');
-                $('input[name=user_phone]').tooltip({
-                    trigger: 'manual',
-                    placement: 'right',
-                    title: textError
-                }).tooltip('show');
-                valid = false;
-            // В любом другом случае все пропускается
-            }else{
-                formGroup.addClass('has-success').removeClass('has-error');
-            }
-        });
+        // Если в поле имя ну будет значения - вызовится ошибка
+        if(val.length == 0){
+          form.find('input[name=user_name]').parents('.form-group').addClass('has-error').removeClass('has-success');
+          form.find('input[name=user_name]').tooltip({
+              trigger: 'manual',
+              placement: 'right',
+              title: textError
+          }).tooltip('show');
+          valid = false;
+          //console.log(textError);
+        // Если в поле тел. значение будет < 18 - вызовится ошибка (маска тел. подгружается с файла bootstrap-mask-phone.js)
+        }else if(form.find('input[name=user_phone]').val().length < 18){
+          form.find('input[name=user_phone]').parents('.form-group').addClass('has-error').removeClass('has-success');
+          form.find('input[name=user_phone]').tooltip({
+              trigger: 'manual',
+              placement: 'right',
+              title: textError
+          }).tooltip('show');
+          valid = false;
+          //console.log(textError);
+        // В любом другом случае все пропускается
+        }else{
+            formGroup.addClass('has-success').removeClass('has-error');
+        }
+      });
 
         return valid;
       },

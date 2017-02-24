@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'form' => 'forms#index', :as => :form
   post 'form' => 'forms#form_send', :as => :form_send
 
-  resources :services, :contacts, :our_works, :about_us
+  resources :services,  only: :index
+  resources :contacts,  only: :index
+  resources :our_works, only: :index
+  resources :about_us,  only: :index
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

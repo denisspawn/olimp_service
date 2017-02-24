@@ -8,6 +8,9 @@ end
 ruby '2.4.0'
 #ruby-gemset=rails_5.0.1
 
+# Oul carousel fot slider brands
+gem 'owlcarousel-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use bootstrap for make better

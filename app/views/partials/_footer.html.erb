@@ -1,0 +1,60 @@
+<footer>
+  <div class="container footer">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="wrap_footer_contacts">
+            <%= link_to(image_tag("logo.svg", class: "logo_img", alt: "Олимп сервис"), root_path, class: "logo_link") %>
+          <div class="footer_tel">
+            <p><span class="glyphicon glyphicon-earphone"></span><%= link_to('8 (812) 220-32-96', 'tel:88122203296') %></p>
+          </div>
+          <div class="footer_email">
+            <p><span class="glyphicon glyphicon-envelope"></span><%= link_to('send@olimp-service.com', 'mailto:send@olimp-service.com') %></p>
+          </div>
+          <div class="olimp">
+            <p>ООО "Олимп"</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="services">
+          <h3>Мы выполняем</h3>
+          <ul>
+            <li><%= link_to('Ремонт сантехнического оборудования', '#') %></li>
+            <li><%= link_to('Монтаж раковины и мойки', '#') %></li>
+            <li><%= link_to('Монтаж и ремонт смесителей', '#') %></li>
+            <li><%= link_to('Монтаж и замена труб и стояков', '#') %></li>
+            <li><%= link_to('Монтаж и замена радиаторов отопления', '#') %></li>
+            <li><%= link_to('Монтаж полотенцесуши-телей', '#') %></li>
+            <li><%= link_to('Сборка и монтаж душевой кабины', '#') %></li>
+            <li><%= link_to('Монтаж и замена ванны и унитаза', '#') %></li>
+            <li><%= link_to('Профессиональ-ный монтаж сантехники', '#') %></li>
+            <li><%= link_to('Техническое обслуживание сантехники', '#') %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="wrapper_footer_form">
+          <p class="attention"><span class="glyphicon glyphicon-bullhorn"></span>Внимание!</p>
+          <p>Оставьте  ваши контактные данные и наш консультант свяжеться с вами в течении 5 мин.</p>
+
+          <div class="footer_form">
+            <%= form_tag("/form", method: "post", id: "order_form_footer", "data-toggle" => "validator", role: "form") do %>
+              <div class="form-group">
+                <label type="hidden" for="user_phone" class="control-label">Телефон:</label>
+                <input type="tel" class="form-control bfh-phone" id="user_phone" name="user_phone" data-format="+7 (ddd) ddd-dd-dd" />
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Имя:</label>
+                <input class="form-control" maxlength="25" id="message-text" name="user_name" placeholder="Введите свое имя" />
+              </div>
+              <div class="button">
+                <button form="order_form_footer" type="submit" class="btn submit_button">Отправить заявку</button>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

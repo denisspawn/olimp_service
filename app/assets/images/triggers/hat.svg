@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg789"
+   version="1.1"
+   viewBox="0 0 26.458334 17.775636"
+   height="17.775637mm"
+   width="26.458334mm">
+  <defs
+     id="defs783">
+    <filter
+       id="filter7901"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood7903"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.623529" />
+      <feComposite
+         id="feComposite7905"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur7907"
+         result="blur"
+         stdDeviation="5.01283"
+         in="composite1" />
+      <feOffset
+         id="feOffset7909"
+         result="offset"
+         dy="4"
+         dx="1" />
+      <feComposite
+         id="feComposite7911"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter7889"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood7891"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.623529" />
+      <feComposite
+         id="feComposite7893"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur7895"
+         result="blur"
+         stdDeviation="5.01283"
+         in="composite1" />
+      <feOffset
+         id="feOffset7897"
+         result="offset"
+         dy="4"
+         dx="1" />
+      <feComposite
+         id="feComposite7899"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata786">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-100.84415,-216.85526)"
+     id="layer1">
+    <g
+       transform="matrix(0.14471198,0,0,0.14471198,-83.548339,114.18068)"
+       id="text8587"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:2.83464241;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         style="fill:none;stroke:#00ffff;stroke-width:2.83464241;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path8592"
+         d="m 1414.2145,766.23957 -44.8438,14.14063 c -1.2502,0.39064 -2.5001,0.54688 -3.7503,0.54688 -1.2498,0 -2.4997,-0.1561 -3.7499,-0.54688 l -44.8437,-14.14063 -1.4063,24.6875 c -0.6248,11.01566 22.422,20.00003 49.9999,20.00003 27.5783,0 50.6251,-8.98437 50.0004,-20.00003 z m 41.406,-25.3125 c 0,-1.09375 -0.7031,-2.03126 -1.7185,-2.42186 l -87.5,-27.50004 c -0.3115,-0.078 -0.5471,-0.078 -0.7816,-0.078 -0.2345,0 -0.4686,0 -0.7812,0.078 l -87.5,27.50004 c -1.0157,0.3906 -1.7185,1.32811 -1.7185,2.42186 0,1.09375 0.7028,2.03126 1.7185,2.42186 l 26.0159,8.12501 c -4.844,6.79689 -7.1876,16.64065 -7.6563,25.78125 -2.969,1.71878 -5.0781,4.92188 -5.0781,8.67189 0,3.51564 1.7969,6.5625 4.5311,8.3594 l -4.5311,33.82811 c -0.077,0.70315 0.1575,1.40626 0.6247,1.95314 0.469,0.54687 1.1722,0.85939 1.8753,0.85939 h 15 c 0.7031,0 1.4063,-0.31255 1.8749,-0.85939 0.4687,-0.54688 0.7032,-1.24999 0.6251,-1.95314 l -4.5314,-33.82811 c 2.7345,-1.7969 4.5314,-4.84376 4.5314,-8.3594 0,-3.67186 -1.9533,-6.79687 -4.922,-8.51561 0.6251,-10.54691 3.7499,-19.14064 8.2033,-22.65628 l 50.9372,16.09377 c 0.3115,0.078 0.5471,0.078 0.7812,0.078 0.2345,0 0.469,0 0.7816,-0.078 l 87.5,-27.50003 c 1.0154,-0.3906 1.7185,-1.32811 1.7185,-2.42186 z" />
+    </g>
+  </g>
+</svg>

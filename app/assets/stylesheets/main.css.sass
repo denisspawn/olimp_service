@@ -18,22 +18,32 @@ $dark-broun: #262626
     -moz-box-shadow: $top $left $blur $color
     box-shadow: $top $left $blur $color
 
-div
+=transition ($name, $duration: 300ms, $delay: 0, $ease: ease)
+  transition:        $name $duration $delay $ease
+  -webkit-animation: $name $duration $delay $ease
+  -moz-animation:    $name $duration $delay $ease
+  -ms-animation:     $name $duration $delay $ease
+
+  //**------------------------------------------------------------//
+
+.wrap_h2
   text-align: center
   .header_h2
+    text-align: center
     display: inline-block
     border-bottom: 2px solid $primary-color
     padding-bottom: 5px
-    margin: 40px 0 70px 0
-hr
-  margin-top: 60px!important
-  border: none!important
-  background-color: $dark-broun!important
-  color: $dark-broun!important
-  height: 1px!important
+    margin: 40px auto 70px auto
+
+.horisontal_separator
+  margin-top: 60px
+  border: none
+  background-color: $dark-broun
+  color: $dark-broun
+  height: 1px
 
 body
-  background-color: #F5F5DC!important
+  background-color: #F5F5DC
   //background: linear-gradient(to top, #F5F5DC, #ffffff)
   //height: 1200px
 
@@ -103,22 +113,28 @@ nav
       color: #ffffff
       text-decoration: none
 
+.modal-content
+  text-align: left
+
 .modal-footer
   button
     border-radius: 10px
     border: 2px solid $primary-color
   .submit_button
-    background-color: $dark-broun
+    background-color: #ffffff
     &:focus, &:active, &:hover
-      background-color: $dark-broun !important
+      color: #ffffff
+      background-color: $dark-broun
       border: 2px solid $primary-color
 
 div
   .tooltip-inner
     white-space: pre
 
-.logo_img
-  padding: 12px
+.logo_link
+  display: block
+  .logo_img
+    padding: 12px
 
 
 .carousel
@@ -128,6 +144,7 @@ div
 
   /* section 1*/
 .wrap_trigger
+  text-align: center
   p
     padding-top: 20px
     font-size: 22px
@@ -140,6 +157,7 @@ div
   margin: 0 auto
   background-color: $dark-broun
   text-align: center
+  padding: 20px
   width: 140px
   height: 140px
   p
@@ -150,17 +168,127 @@ div
 
   /* section 2*/
 .element_menu
-  +border-radius(10%)
+  text-align: center
+  display: block
+  +transition(all, 0.1s, ease-out, 0.1s)
+  +border-radius(3%)
   +box-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.5))
   margin: 20px auto
   background-color: $dark-broun
   padding: 10px 10px
   width: 200px
   height: 200px
+  &:hover
+    opacity: .8
   p
     padding-top: 10px
     vertical-align: middle
-    a
+    color: $primary-color
+    display: inline-block
+    font-size: 16px
+    text-decoration: none
+
+
+.owl-carousel
+  margin-top: 50px
+
+.owl-page
+  &.active
+    border-bottom: none
+    span
+      background-color: $dark-broun
+
+// footer
+
+footer
+  background-color: $dark-broun
+  padding: 40px
+  margin-top: 50px
+  color: #ffffff
+  .footer
+    background-color: $dark-broun
+    .logo_link
+      .logo_img
+        padding-bottom: 20px
+        display: block
+        margin: 0 auto
+
+.wrap_footer_contacts
+  padding-top: 40px
+  text-align: center
+  color: #ffffff
+  p
+    font-size: 16px
+    padding-top: 10px
+    span
       color: $primary-color
-      font-size: 16px
+      padding-right: 10px
+  a
+    color: #ffffff
+    &:hover, &:active, &:hover
       text-decoration: none
+      color: $primary-color
+    &:focus
+      color: #ffffff
+      text-decoration: none
+
+.olimp
+  p
+    font-size: 32px
+
+.services
+  color: #ffffff
+  border-left: 2px solid #ffffff
+  border-right: 2px solid #ffffff
+  h3
+    text-align: center
+  ul
+    padding-left: 48px
+    li
+      font-size: 24px
+      line-height: 20px
+      a
+        font-size: 14px
+        color: #ffffff
+
+.wrapper_footer_form
+  text-align: center
+  margin: 0 auto
+  padding: 2% 10%
+  border: 2px solid #ffffff
+  width: 90%
+  +border-radius(10px)
+  p
+    color: #cccccc
+    font-size: 12px
+  .attention
+    font-size: 30px
+    color: #ffffff
+    span
+      font-size: 24px
+      padding-right: 10px
+
+.footer_form
+  text-align: left
+  .form-group
+    margin-bottom: 0
+  label
+    visibility: hidden
+    height: 0px
+  input
+    +border-radius(20px)
+    padding: 20px 10px
+    margin: 0 auto
+    width: 80%
+  button
+    +border-radius(20px)
+    border: 2px solid $primary-color
+    font-size: 20px
+    color: #ffffff
+    background-color: inherit
+    padding: 10px 10px
+    width: 80%
+    display: block
+    margin: 20px auto
+    &:hover
+      color: $primary-color
